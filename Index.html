@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PickSmarter - Best Products & Reviews</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#0a0f1f;
+color:white;
+}
+
+header{
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#0f172a;
+position:sticky;
+top:0;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#38bdf8;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+}
+
+.hero{
+text-align:center;
+padding:100px 20px;
+background:linear-gradient(135deg,#0f172a,#1e3a8a);
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+max-width:700px;
+margin:auto;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 35px;
+background:#38bdf8;
+color:#000;
+font-weight:bold;
+text-decoration:none;
+border-radius:10px;
+}
+
+.products{
+padding:80px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:36px;
+margin-bottom:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:#111827;
+padding:20px;
+border-radius:15px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+border-radius:10px;
+}
+
+.card h3{
+margin:15px 0;
+}
+
+.card a{
+display:inline-block;
+margin-top:10px;
+padding:10px 20px;
+background:#38bdf8;
+color:black;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#0f172a;
+margin-top:50px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">PickSmarter</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Reviews</a>
+<a href="#">Deals</a>
+<a href="#">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Find The Best Products Before You Buy</h1>
+
+<p>
+Expert reviews, top recommendations, and unbeatable deals from around the world.
+</p>
+
+<a href="#" class="btn">Explore Products</a>
+</section>
+
+<section class="products">
+
+<h2 class="section-title">Top Categories</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500" alt="">
+<h3>Electronics</h3>
+<p>Best gadgets and tech products.</p>
+<a href="#">View Deals</a>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=500" alt="">
+<h3>Fashion</h3>
+<p>Trending fashion and accessories.</p>
+<a href="#">View Deals</a>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500" alt="">
+<h3>Home & Kitchen</h3>
+<p>Top picks for your home.</p>
+<a href="#">View Deals</a>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 PickSmarter. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
