@@ -61,9 +61,10 @@ border-bottom:1px solid rgba(255,255,255,.08);
 
 .navbar{
 display:flex;
-justify-content:space-between;
+justify-content:center;
 align-items:center;
 padding:20px 0;
+position:relative;
 }
 
 .logo{
@@ -88,6 +89,8 @@ transition:.3s;
 color:#4ea1ff;
 }
 .menu-icon{
+position:absolute;
+left:15px;
 display:none;
 font-size:28px;
 color:white;
@@ -236,7 +239,7 @@ color:#b8c4d6;
 
 <header>
 <div class="container navbar">
- <div class="menu-icon">
+ <div class="menu-icon" onclick="toggleMenu()">
 ☰
  </div>
 
@@ -757,6 +760,17 @@ color:#8ca0be;
 }
 
 </style>
+ <script>
+function toggleMenu() {
+  var menu = document.querySelector('.nav-links');
+
+  if (menu.style.display === 'flex') {
+    menu.style.display = 'none';
+  } else {
+    menu.style.display = 'flex';
+  }
+}
+ </script>
 
 </body>
 </html>
