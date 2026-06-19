@@ -87,7 +87,12 @@ transition:.3s;
 .nav-links a:hover{
 color:#4ea1ff;
 }
-
+.menu-icon{
+display:none;
+font-size:28px;
+color:white;
+cursor:pointer;
+}
 /* HERO */
 @media(max-width:768px){
 
@@ -101,10 +106,17 @@ font-size:18px;
 margin-right:15px;
 }
 
+.menu-icon{
+display:block;
+}
+
 .nav-links{
+display:none;
+flex-direction:column;
 gap:15px;
 font-size:14px;
 }
+
 
 .search-box{
 flex-direction:column;
@@ -224,6 +236,9 @@ color:#b8c4d6;
 
 <header>
 <div class="container navbar">
+ <div class="menu-icon">
+☰
+ </div>
 
 <div class="logo">
 PickSmarter
