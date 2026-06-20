@@ -90,8 +90,9 @@ color:#4ea1ff;
 }
 .menu-icon{
 position:absolute;
-left:0;
- top:-8px;
+left:10px;
+ top:50%;
+ transform:translateY(-50%);
 display:none;
 font-size:28px;
 color:white;
@@ -115,7 +116,7 @@ display:block;
 }
 
 .nav-links{
-display:none;
+display:flex;
 flex-direction:column;
 position:fixed;
 top:55px;
@@ -135,7 +136,6 @@ text-align:left;
  z-index:9999;
 }
 .nav-links.show{
-    display:flex;
     left:0;
 }
 
