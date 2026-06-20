@@ -353,31 +353,88 @@ Today's Deals
 
 </section>
  <script>
+<script>
 function searchSite() {
 let search = document.getElementById("searchInput").value.toLowerCase();
 
-if (search.includes("electronics")) {
+if (
+search.includes("electronics") ||
+search.includes("phone") ||
+search.includes("smartphone") ||
+search.includes("laptop") ||
+search.includes("earbuds") ||
+search.includes("smartwatch")
+) {
 window.location.href = "electronics.html";
 }
-else if (search.includes("fashion")) {
+
+else if (
+search.includes("fashion") ||
+search.includes("shirt") ||
+search.includes("shirts") ||
+search.includes("jeans") ||
+search.includes("cap") ||
+search.includes("caps") ||
+search.includes("jacket") ||
+search.includes("sneakers") ||
+search.includes("watch")
+) {
 window.location.href = "fashion.html";
 }
-else if (search.includes("fitness")) {
+
+else if (
+search.includes("fitness") ||
+search.includes("gym") ||
+search.includes("protein") ||
+search.includes("creatine") ||
+search.includes("whey") ||
+search.includes("dumbbell")
+) {
 window.location.href = "fitness.html";
 }
-else if (search.includes("gaming")) {
+
+else if (
+search.includes("gaming") ||
+search.includes("playstation") ||
+search.includes("xbox") ||
+search.includes("headset") ||
+search.includes("keyboard") ||
+search.includes("mouse")
+) {
 window.location.href = "gaming.html";
 }
-else if (search.includes("beauty")) {
+
+else if (
+search.includes("beauty") ||
+search.includes("pilgrim") ||
+search.includes("dot") ||
+search.includes("cetaphil") ||
+search.includes("minimalist") ||
+search.includes("serum") ||
+search.includes("shampoo")
+) {
 window.location.href = "beauty.html";
 }
-else if (search.includes("home")) {
+
+else if (
+search.includes("home") ||
+search.includes("kitchen") ||
+search.includes("chair") ||
+search.includes("office chair") ||
+search.includes("study table") ||
+search.includes("refrigerator") ||
+search.includes("washing machine") ||
+search.includes("lg") ||
+search.includes("samsung")
+) {
 window.location.href = "home-kitchen.html";
 }
+
 else {
-alert("No matching category found");
+alert("No matching result found");
 }
 }
+</script>
  </script>
   <section style="padding:50px 20px;">
 <div style="background:#101d34;padding:25px;border-radius:15px;text-align:center;max-width:900px;margin:auto;">
