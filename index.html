@@ -116,10 +116,15 @@ display:block;
 .nav-links{
 display:none;
 flex-direction:column;
-position:absolute;
+position:fixed;
 top:55px;
-left:0;
-width:130px;
+left:-250px;
+width:250px;
+height:100vh;
+background:#001133;
+padding-top:70px;
+transition:0.3s ease;
+z-index:999;
 background:#07111f;
 padding:10px;
 gap:12px;
@@ -129,8 +134,9 @@ text-align:left;
  z-index:9999;
 }
 .nav-links.show{
-display:flex;
-} 
+    display:flex;
+    left:0;
+}
 
 
 .search-box{
