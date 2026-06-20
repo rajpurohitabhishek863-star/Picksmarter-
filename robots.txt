@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rajpurohitabhishek863-star.github.io/Picksmarter-/sitemap.xml
