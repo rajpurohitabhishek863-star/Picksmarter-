@@ -327,10 +327,11 @@ Top Smartphones
 
 <input
 type="text"
+id="searchInput"
 placeholder="Search products, brands, categories..."
 >
 
-<button>
+<button onclick="searchSite()">
 Search
 </button>
 
@@ -351,6 +352,33 @@ Today's Deals
 </div>
 
 </section>
+ <script>
+function searchSite() {
+let search = document.getElementById("searchInput").value.toLowerCase();
+
+if (search.includes("electronics")) {
+window.location.href = "electronics.html";
+}
+else if (search.includes("fashion")) {
+window.location.href = "fashion.html";
+}
+else if (search.includes("fitness")) {
+window.location.href = "fitness.html";
+}
+else if (search.includes("gaming")) {
+window.location.href = "gaming.html";
+}
+else if (search.includes("beauty")) {
+window.location.href = "beauty.html";
+}
+else if (search.includes("home")) {
+window.location.href = "home-kitchen.html";
+}
+else {
+alert("No matching category found");
+}
+}
+ </script>
   <section style="padding:50px 20px;">
 <div style="background:#101d34;padding:25px;border-radius:15px;text-align:center;max-width:900px;margin:auto;">
 
