@@ -3,180 +3,686 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Best Discounts - PickSmarter</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
 body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:#f4f7fc;
+background:#020617;
+color:white;
+}
+
+.container{
+width:95%;
+max-width:1400px;
+margin:auto;
 }
 
 header{
-    background:#0d47a1;
-    color:white;
-    text-align:center;
-    padding:20px;
+text-align:center;
+padding:50px 20px;
+background:linear-gradient(180deg,#081a3c,#020617);
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.logo{
+font-size:48px;
+font-weight:800;
+}
+
+.logo span{
+color:#facc15;
+}
+
+.main-title{
+font-size:72px;
+font-weight:800;
+margin-top:20px;
+line-height:1.1;
+}
+
+.subtitle{
+margin-top:15px;
+font-size:20px;
+color:#cbd5e1;
 }
 
 .section{
-    padding:30px 20px;
+padding:40px 0;
 }
 
-.section h2{
-    color:#0d47a1;
-    text-align:center;
-    margin-bottom:20px;
+.section-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:25px;
+}
+
+.section-title{
+font-size:36px;
+font-weight:700;
+}
+
+.view-all{
+padding:12px 22px;
+border-radius:30px;
+text-decoration:none;
+color:white;
+font-weight:600;
+border:2px solid rgba(255,255,255,0.25);
 }
 
 .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
 }
 
 .card{
-    background:white;
-    border-radius:15px;
-    padding:20px;
-    text-align:center;
-    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+background:#081426;
+border-radius:22px;
+padding:20px;
+text-align:center;
+transition:0.3s;
+position:relative;
+overflow:hidden;
 }
 
-.card img{
-    width:100%;
-    height:200px;
-    object-fit:contain;
+.card:hover{
+transform:translateY(-8px);
 }
 
-.card h3{
-    margin:15px 0;
+.badge{
+display:inline-block;
+padding:6px 10px;
+border-radius:8px;
+font-size:12px;
+font-weight:700;
+margin:4px;
 }
 
-.btn{
-    display:inline-block;
-    padding:10px 20px;
-    background:#0d47a1;
-    color:white;
-    text-decoration:none;
-    border-radius:8px;
+.best{
+background:#ff5722;
 }
+
+.discount{
+background:#22c55e;
+}
+
+.pick{
+background:#7c3aed;
+}
+
+.product-img{
+width:180px;
+height:180px;
+margin:15px auto;
+border-radius:15px;
+background:#0f1d35;
+display:flex;
+align-items:center;
+justify-content:center;
+color:#94a3b8;
+font-size:14px;
+}
+
+.product-name{
+font-size:28px;
+font-weight:700;
+margin-top:10px;
+}
+
+.product-desc{
+color:#cbd5e1;
+margin:10px 0;
+font-size:15px;
+}
+
+.price{
+font-size:34px;
+font-weight:800;
+color:#facc15;
+}
+
+.old-price{
+font-size:22px;
+margin-left:10px;
+text-decoration:line-through;
+color:#94a3b8;
+}
+
+.deal-btn{
+display:block;
+margin-top:18px;
+padding:14px;
+border-radius:12px;
+text-decoration:none;
+color:white;
+font-weight:700;
+}
+
+.fashion-card{
+border:2px solid #2563eb;
+}
+
+.fashion-btn{
+background:#2563eb;
+}
+
+.beauty-card{
+border:2px solid #ec4899;
+}
+
+.beauty-btn{
+background:#ec4899;
+}
+
+.fitness-card{
+border:2px solid #22c55e;
+}
+
+.fitness-btn{
+background:#22c55e;
+}
+
+.gaming-card{
+border:2px solid #9333ea;
+}
+
+.gaming-btn{
+background:#9333ea;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+padding:40px 0 60px;
+}
+
+.feature-box{
+background:#081426;
+padding:25px;
+border-radius:18px;
+text-align:center;
+}
+
+.feature-box h3{
+margin-bottom:10px;
+}
+
+footer{
+text-align:center;
+padding:30px;
+color:#94a3b8;
+}
+
+@media(max-width:900px){
+
+.grid{
+grid-template-columns:1fr;
+}
+
+.features{
+grid-template-columns:1fr;
+}
+
+.main-title{
+font-size:42px;
+}
+
+.section-header{
+flex-direction:column;
+gap:15px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>🔥 Best Discounts</h1>
-<p>Top Deals Across Categories</p>
+
+<div class="logo">
+Pick<span>Smarter</span>
+</div>
+
+<h1 class="main-title">
+BEST DISCOUNTS
+</h1>
+
+<p class="subtitle">
+Top Deals • Best Quality • Biggest Savings
+</p>
+
 </header>
 
-<!-- Fashion -->
-<div class="section">
-<h2>Fashion</h2>
+<div class="container">
+    <!-- FASHION DEALS -->
+
+<section class="section">
+
+<div class="section-header">
+<h2 class="section-title">👔 Fashion Deals</h2>
+<a href="#" class="view-all">View All Deals →</a>
+</div>
 
 <div class="grid">
 
-<div class="card">
-<img src="IMAGE-LINK" alt="">
-<h3>Premium Shirt</h3>
-<a href="#" class="btn">View Deal</a>
+<div class="card fashion-card">
+
+<span class="badge best">BEST DEAL</span>
+<span class="badge discount">60% OFF</span>
+
+<div class="product-img">
+IMAGE
 </div>
 
-<div class="card">
-<img src="IMAGE-LINK" alt="">
-<h3>Running Shoes</h3>
-<a href="#" class="btn">View Deal</a>
+<h3 class="product-name">Premium Shirt</h3>
+
+<p class="product-desc">
+Stylish. Comfortable. Premium Quality.
+</p>
+
+<div class="price">
+₹999
+<span class="old-price">₹2499</span>
 </div>
 
-<div class="card">
-<img src="IMAGE-LINK" alt="">
-<h3>Premium Jeans</h3>
-<a href="#" class="btn">View Deal</a>
+<a href="#" class="deal-btn fashion-btn">
+View Deal →
+</a>
+
+</div>
+
+
+<div class="card fashion-card">
+
+<span class="badge best">BEST DEAL</span>
+<span class="badge discount">50% OFF</span>
+
+<div class="product-img">
+IMAGE
+</div>
+
+<h3 class="product-name">Running Shoes</h3>
+
+<p class="product-desc">
+Built For Comfort & Daily Performance.
+</p>
+
+<div class="price">
+₹1499
+<span class="old-price">₹2999</span>
+</div>
+
+<a href="#" class="deal-btn fashion-btn">
+View Deal →
+</a>
+
+</div>
+
+
+<div class="card fashion-card">
+
+<span class="badge pick">TOP PICK</span>
+<span class="badge discount">55% OFF</span>
+
+<div class="product-img">
+IMAGE
+</div>
+
+<h3 class="product-name">Premium Jeans</h3>
+
+<p class="product-desc">
+Modern Fit. Durable Denim. Premium Look.
+</p>
+
+<div class="price">
+₹1199
+<span class="old-price">₹2699</span>
+</div>
+
+<a href="#" class="deal-btn fashion-btn">
+View Deal →
+</a>
+
 </div>
 
 </div>
-</div>
 
-<!-- Beauty -->
-<div class="section">
-<h2>Beauty</h2>
+</section>
+
+
+<!-- BEAUTY DEALS -->
+
+<section class="section">
+
+<div class="section-header">
+<h2 class="section-title">✨ Beauty Deals</h2>
+<a href="#" class="view-all">View All Deals →</a>
+</div>
 
 <div class="grid">
 
-<div class="card">
-<img src="IMAGE-LINK" alt="">
-<h3>Face Wash</h3>
-<a href="#" class="btn">View Deal</a>
+<div class="card beauty-card">
+
+<span class="badge best">BEST DEAL</span>
+<span class="badge discount">40% OFF</span>
+
+<div class="product-img">
+IMAGE
 </div>
 
-<div class="card">
-<img src="IMAGE-LINK" alt="">
-<h3>Sunscreen</h3>
-<a href="#" class="btn">View Deal</a>
+<h3 class="product-name">Face Wash</h3>
+
+<p class="product-desc">
+Deep Cleanse. Fresh & Healthy Skin.
+</p>
+
+<div class="price">
+₹299
+<span class="old-price">₹499</span>
 </div>
 
-<div class="card">
-<img src="IMAGE-LINK" alt="">
-<h3>Hair Serum</h3>
-<a href="#" class="btn">View Deal</a>
+<a href="#" class="deal-btn beauty-btn">
+View Deal →
+</a>
+
+</div>
+
+
+<div class="card beauty-card">
+
+<span class="badge best">BEST DEAL</span>
+<span class="badge discount">45% OFF</span>
+
+<div class="product-img">
+IMAGE
+</div>
+
+<h3 class="product-name">Sunscreen</h3>
+
+<p class="product-desc">
+SPF Protection For Everyday Use.
+</p>
+
+<div class="price">
+₹349
+<span class="old-price">₹649</span>
+</div>
+
+<a href="#" class="deal-btn beauty-btn">
+View Deal →
+</a>
+
+</div>
+
+
+<div class="card beauty-card">
+
+<span class="badge pick">TOP PICK</span>
+<span class="badge discount">50% OFF</span>
+
+<div class="product-img">
+IMAGE
+</div>
+
+<h3 class="product-name">Hair Serum</h3>
+
+<p class="product-desc">
+Smooth. Shiny. Frizz-Free Hair.
+</p>
+
+<div class="price">
+₹399
+<span class="old-price">₹799</span>
+</div>
+
+<a href="#" class="deal-btn beauty-btn">
+View Deal →
+</a>
+
 </div>
 
 </div>
-</div>
 
-<!-- Fitness -->
-<div class="section">
-<h2>Fitness</h2>
+</section>
+<!-- FITNESS DEALS -->
+
+<section class="section">
+
+<div class="section-header">
+<h2 class="section-title">💪 Fitness Deals</h2>
+<a href="#" class="view-all">View All Deals →</a>
+</div>
 
 <div class="grid">
 
-<div class="card">
-<img src="IMAGE-LINK" alt="">
-<h3>Protein Shaker</h3>
-<a href="#" class="btn">View Deal</a>
+<div class="card fitness-card">
+
+<span class="badge best">BEST DEAL</span>
+<span class="badge discount">40% OFF</span>
+
+<div class="product-img">
+IMAGE
 </div>
 
-<div class="card">
-<img src="IMAGE-LINK" alt="">
-<h3>Whey Protein</h3>
-<a href="#" class="btn">View Deal</a>
+<h3 class="product-name">Protein Shaker</h3>
+
+<p class="product-desc">
+Leak-Proof. Durable. Gym Essential.
+</p>
+
+<div class="price">
+₹399
+<span class="old-price">₹699</span>
 </div>
 
-<div class="card">
-<img src="IMAGE-LINK" alt="">
-<h3>Gym T-Shirt</h3>
-<a href="#" class="btn">View Deal</a>
+<a href="#" class="deal-btn fitness-btn">
+View Deal →
+</a>
+
+</div>
+
+
+<div class="card fitness-card">
+
+<span class="badge best">BEST DEAL</span>
+<span class="badge discount">35% OFF</span>
+
+<div class="product-img">
+IMAGE
+</div>
+
+<h3 class="product-name">Whey Protein</h3>
+
+<p class="product-desc">
+Support Recovery & Muscle Growth.
+</p>
+
+<div class="price">
+₹1799
+<span class="old-price">₹2799</span>
+</div>
+
+<a href="#" class="deal-btn fitness-btn">
+View Deal →
+</a>
+
+</div>
+
+
+<div class="card fitness-card">
+
+<span class="badge pick">TOP PICK</span>
+<span class="badge discount">45% OFF</span>
+
+<div class="product-img">
+IMAGE
+</div>
+
+<h3 class="product-name">Gym T-Shirt</h3>
+
+<p class="product-desc">
+Lightweight. Breathable. Comfortable.
+</p>
+
+<div class="price">
+₹349
+<span class="old-price">₹599</span>
+</div>
+
+<a href="#" class="deal-btn fitness-btn">
+View Deal →
+</a>
+
 </div>
 
 </div>
-</div>
 
-<!-- Gaming -->
-<div class="section">
-<h2>Gaming</h2>
+</section>
+
+
+<!-- GAMING DEALS -->
+
+<section class="section">
+
+<div class="section-header">
+<h2 class="section-title">🎮 Gaming Deals</h2>
+<a href="#" class="view-all">View All Deals →</a>
+</div>
 
 <div class="grid">
 
-<div class="card">
-<img src="IMAGE-LINK" alt="">
-<h3>Gaming Headset</h3>
-<a href="#" class="btn">View Deal</a>
+<div class="card gaming-card">
+
+<span class="badge best">BEST DEAL</span>
+<span class="badge discount">40% OFF</span>
+
+<div class="product-img">
+IMAGE
 </div>
 
-<div class="card">
-<img src="IMAGE-LINK" alt="">
-<h3>Gaming Mouse</h3>
-<a href="#" class="btn">View Deal</a>
+<h3 class="product-name">Gaming Headset</h3>
+
+<p class="product-desc">
+Immersive Sound & Crystal Clear Voice.
+</p>
+
+<div class="price">
+₹1299
+<span class="old-price">₹2299</span>
 </div>
 
-<div class="card">
-<img src="IMAGE-LINK" alt="">
-<h3>Gaming Keyboard</h3>
-<a href="#" class="btn">View Deal</a>
+<a href="#" class="deal-btn gaming-btn">
+View Deal →
+</a>
+
+</div>
+
+
+<div class="card gaming-card">
+
+<span class="badge best">BEST DEAL</span>
+<span class="badge discount">35% OFF</span>
+
+<div class="product-img">
+IMAGE
+</div>
+
+<h3 class="product-name">Gaming Gloves</h3>
+
+<p class="product-desc">
+Better Grip. Better Control.
+</p>
+
+<div class="price">
+₹599
+<span class="old-price">₹999</span>
+</div>
+
+<a href="#" class="deal-btn gaming-btn">
+View Deal →
+</a>
+
+</div>
+
+
+<div class="card gaming-card">
+
+<span class="badge pick">TOP PICK</span>
+<span class="badge discount">35% OFF</span>
+
+<div class="product-img">
+IMAGE
+</div>
+
+<h3 class="product-name">Mobile Gaming Triggers</h3>
+
+<p class="product-desc">
+Fast Response For Competitive Gaming.
+</p>
+
+<div class="price">
+₹349
+<span class="old-price">₹599</span>
+</div>
+
+<a href="#" class="deal-btn gaming-btn">
+View Deal →
+</a>
+
 </div>
 
 </div>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section class="features">
+
+<div class="feature-box">
+<h3>🏷️ Best Prices</h3>
+<p>Handpicked deals with maximum savings.</p>
+</div>
+
+<div class="feature-box">
+<h3>✅ Trusted Deals</h3>
+<p>Only quality products from trusted stores.</p>
+</div>
+
+<div class="feature-box">
+<h3>🔒 Secure Shopping</h3>
+<p>Safe links to reliable marketplaces.</p>
+</div>
+
+<div class="feature-box">
+<h3>⭐ Top Picks</h3>
+<p>Curated recommendations for smart buyers.</p>
+</div>
+
+</section>
+
+
+<footer>
+© 2026 PickSmarter • Smart Shopping Starts Here
+</footer>
+
 </div>
 
 </body>
